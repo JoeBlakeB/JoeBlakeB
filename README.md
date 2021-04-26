@@ -1,4 +1,5 @@
 - 👋 Hi, I’m @JoeBlakeB
+- I use Arch BTW
 - Idk what to put here
 - 🏳‍🌈
 - Discord: Joe#8648
