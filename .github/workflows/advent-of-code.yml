@@ -1,0 +1,27 @@
+name: Update AoC Badges # https://github.com/marketplace/actions/aoc-badges
+on:
+  schedule:
+    - cron: '27 8,9,12,19 1-25 12 *'
+    
+  workflow_dispatch:
+  
+# push:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2                # clones your repo
+          
+      - uses: joblo2213/aoc-badges-action@v3
+        with:
+          userid: 2334371
+          session: ${{ secrets.AOC_SESSION }}
+
+          year: 2022
+          starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/stars%20⭐-)[0-9]+(?=-yellow)'
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update badges
+          file_pattern: README.md
