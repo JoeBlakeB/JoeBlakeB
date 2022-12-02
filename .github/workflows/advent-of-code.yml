@@ -5,13 +5,13 @@ on:
     
   workflow_dispatch:
   
-# push:
+  push:
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2                # clones your repo
+      - uses: actions/checkout@v2
           
       - uses: joblo2213/aoc-badges-action@v3
         with:
@@ -19,7 +19,8 @@ jobs:
           session: ${{ secrets.AOC_SESSION }}
 
           year: 2022
-          starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/stars%20⭐-)[0-9]+(?=-yellow)'
+          starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/Advent_of_Code_2022-)[0-9]+(?=_⭐-blue)'
+          file: README.md
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
