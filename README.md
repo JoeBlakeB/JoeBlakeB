@@ -8,4 +8,4 @@
 </tr>
 <table>
 
-![](https://img.shields.io/badge/Advent_of_Code_2022-6_⭐-blue)
+![](https://img.shields.io/badge/Advent_of_Code_2022-8_⭐-blue)
