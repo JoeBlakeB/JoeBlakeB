@@ -1,7 +1,7 @@
 name: Update AoC Badges # https://github.com/marketplace/actions/aoc-badges
 on:
   schedule:
-    - cron: '27 5,6,7,12,19 1-25 12 *'
+    - cron: '27 5,6,9,15 1-25 12 *'
     
   workflow_dispatch:
   
@@ -12,14 +12,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+
+      - name: Advent of Code Badge # https://github.com/marketplace/actions/aoc-badges
+        run: bash -c 'wget https://raw.githubusercontent.com/J0B10/aoc-badges-action/master/aoc-badges.py && if (echo "3da15cc87facd6ce192a3546efbd6dd23ba856a9f63bbcdd6149131a7dc4838e aoc-badges.py" | sha256sum --check) then INPUT_YEAR=2022 INPUT_SESSION=${{ secrets.AOC_SESSION }} INPUT_USERID=2334371 INPUT_FILE="README.md" INPUT_DAYREGEX="(?<=https:\/\/img\.shields\.io\/badge\/day%20-)[0-9]+(?=-blue)" INPUT_STARSREGEX="(?<=https:\/\/img\.shields\.io\/badge\/Advent_of_Code_2022-)[0-9]+(?=_⭐-blue)" INPUT_DAYSCOMPLETEDREGEX="(?<=https:\/\/img\.shields\.io\/badge\/days%20completed-)[0-9]+(?=-red)"  python ./aoc-badges.py; fi'
           
-      - uses: joblo2213/aoc-badges-action@v3
-        with:
-          userid: 2334371
-          session: ${{ secrets.AOC_SESSION }}
-          year: 2022
-          starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/Advent_of_Code_2022-)[0-9]+(?=_⭐-blue)'
-          file: README.md
+      # - uses: joblo2213/aoc-badges-action@v3
+      #   with:
+      #     userid: 2334371
+      #     session: \$\{\{ secrets . AOC_SESSION \}\}
+      #     year: 2022
+      #     starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/Advent_of_Code_2022-)[0-9]+(?=_⭐-blue)'
+      #     file: README.md
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
