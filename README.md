@@ -7,5 +7,3 @@
     </td>
 </tr>
 <table>
-
-![](https://img.shields.io/badge/Advent_of_Code_2024-33_⭐-blue)
