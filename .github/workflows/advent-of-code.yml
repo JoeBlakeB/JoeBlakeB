@@ -1,11 +1,11 @@
 name: Update AoC Badges # https://github.com/marketplace/actions/aoc-badges
 on:
-  schedule:
-    - cron: '23 20 * 12 *'
+#  schedule:
+#    - cron: '23 20 * 12 *'
     
   workflow_dispatch:
   
-  push:
+#  push:
 
 jobs:
   update:
