@@ -8,7 +8,7 @@
         <br /><sub><b>Portfolio</b></sub></a><br />
     <td align="center"><a href="https://raw.githubusercontent.com/JoeBlakeB/JoeBlakeB/refs/heads/main/joe-baker-cv.pdf">
         <img src="./images/portfolio.svg" width="96px;" alt=""/>
-        <br /><sub><b>Curriculum Vitae</b></sub></a><br />
+        <br /><sub><b>CV</b></sub></a><br />
     </td>
 </tr>
 <table>
